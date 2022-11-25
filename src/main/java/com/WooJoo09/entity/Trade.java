@@ -1,6 +1,7 @@
 package com.WooJoo09.entity;
 
 import com.WooJoo09.constant.DoneTrade;
+import com.WooJoo09.constant.IsActive;
 import com.WooJoo09.constant.TradeMethod;
 import lombok.Getter;
 import lombok.Setter;
@@ -28,11 +29,11 @@ public class Trade {
 //    @OneToMany(mappedBy = "disTradeNum", cascade = CascadeType.REMOVE, orphanRemoval = true)
     private Long tradeNum;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category")
     private Category category; // pk의 타입으로 자동으로 들어가지는듯?
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "host")
     private Member host;
 
@@ -66,5 +67,4 @@ public class Trade {
 
     @Enumerated(EnumType.STRING)
     private DoneTrade doneTrade;
-
 }

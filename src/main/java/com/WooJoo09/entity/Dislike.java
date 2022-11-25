@@ -14,11 +14,11 @@ public class Dislike {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long dislikeNum;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "disTradeNum")
     private Trade disTradeNum;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "disMemNum")
     private Member disMemNum;
 }

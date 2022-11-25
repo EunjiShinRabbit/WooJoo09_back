@@ -20,15 +20,15 @@ public class Chat {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long chatNum;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "partnerNum")
     private Partner partnerNum;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "sender")
     private Member sender;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "receiver")
     private Member receiver;
 

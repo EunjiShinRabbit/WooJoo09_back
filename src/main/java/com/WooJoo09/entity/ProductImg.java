@@ -16,7 +16,7 @@ public class ProductImg {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long imgNum;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "tradeNum")
     private Trade tradeNum;
 

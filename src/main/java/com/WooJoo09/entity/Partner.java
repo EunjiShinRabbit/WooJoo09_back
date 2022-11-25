@@ -21,11 +21,11 @@ public class Partner {
 //    @OneToMany(mappedBy = "partnerNum", cascade = CascadeType.REMOVE, orphanRemoval = true)
     private Long partnerNum;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "tradeNum")
     private Trade tradeNum;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "partMemNum")
     private Member partMemNum;
 

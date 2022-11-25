@@ -15,11 +15,11 @@ public class Star {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long StarNum;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "tradeNum")
     private Trade tradeNum;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "memberNum")
     private Member memberNum;
 }

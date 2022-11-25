@@ -15,11 +15,11 @@ public class Complain {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long complainNum;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "complainTrade")
     private Trade complainTrade;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "complainant")
     private Member complainant;
 }

@@ -14,11 +14,11 @@ public class Good {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long goodNum;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "goodTradeNum")
     private Trade goodTradeNum;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "goodMemNum")
     private Member goodMemNum;
 
