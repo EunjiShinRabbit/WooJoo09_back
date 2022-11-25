@@ -37,8 +37,8 @@ public class Trade {
     @JoinColumn(name = "host")
     private Member host;
 
-    @Column(nullable = false)
-    private int countPartner;
+    @Column(nullable = false) // 공구 참여자수
+    private int limitPartner;
 
     @Column(nullable = false, length = 60)
     private String product;
