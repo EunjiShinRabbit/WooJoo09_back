@@ -18,7 +18,8 @@ public class TradeDTO {
     private int limitPartner; // 공구 참여자수
     private String product;
     private int price;
-    private String location;
+    private String city;
+    private String town;
     private LocalDateTime writeDate;
     private Date dueDate;
     private String tradeMethod;

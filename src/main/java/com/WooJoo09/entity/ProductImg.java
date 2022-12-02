@@ -1,5 +1,6 @@
 package com.WooJoo09.entity;
 
+import com.WooJoo09.constant.IsRepresent;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -22,5 +23,8 @@ public class ProductImg {
 
     @Column(nullable = false, length = 500)
     private String imgUrl;
+
+    @Column(nullable = false)
+    private IsRepresent isRepresent;
 
 }
