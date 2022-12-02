@@ -13,6 +13,7 @@ import java.util.Date;
 public class MemberDTO {
     private long MemberNum;
     private String id;
+    private String pwd;
     private String nickname;
     private String realName;
     private String email;
@@ -24,11 +25,4 @@ public class MemberDTO {
     private String introduce;
     private String isActive;
     private String grade;
-
-
-
-
-
-
-
 }

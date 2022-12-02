@@ -25,6 +25,7 @@ public class ProductImg {
     private String imgUrl;
 
     @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
     private IsRepresent isRepresent;
 
 }

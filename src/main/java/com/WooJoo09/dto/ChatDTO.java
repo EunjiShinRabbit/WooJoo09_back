@@ -1,8 +1,5 @@
 package com.WooJoo09.dto;
 
-import com.WooJoo09.constant.IsImg;
-import com.WooJoo09.constant.IsRead;
-import com.WooJoo09.entity.Partner;
 import lombok.Getter;
 import lombok.Setter;
 

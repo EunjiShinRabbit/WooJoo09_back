@@ -1,7 +1,6 @@
 package com.WooJoo09.entity;
 
-import com.WooJoo09.constant.AcceptTrade;
-import com.WooJoo09.constant.IsImg;
+import com.WooJoo09.constant.MsgType;
 import com.WooJoo09.constant.IsRead;
 import lombok.Getter;
 import lombok.Setter;
@@ -28,9 +27,9 @@ public class Chat {
     @JoinColumn(name = "sender")
     private Member sender;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "receiver")
-    private Member receiver;
+//    @ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "receiver")
+//    private Member receiver;
 
     @Column(nullable = false, length = 500)
     private String chatContent;
@@ -43,6 +42,6 @@ public class Chat {
     private IsRead isRead;
 
     @Enumerated(EnumType.STRING)
-    private IsImg isImg;
+    private MsgType msgType;
 
 }

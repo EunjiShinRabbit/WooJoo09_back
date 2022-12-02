@@ -46,10 +46,10 @@ public class Trade {
     @Column(nullable = false)
     private int price;
 
-    @Column(nullable = false, length = 10)
+    @Column(length = 15)
     private String city;
 
-    @Column(nullable = false, length = 10)
+    @Column(length = 15)
     private String town;
 
     @CreationTimestamp
