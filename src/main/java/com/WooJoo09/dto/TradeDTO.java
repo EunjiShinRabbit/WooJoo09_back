@@ -37,6 +37,7 @@ public class TradeDTO {
     private int countHost; // 거래 주최 수
     private int countPartner; // 거래 참여 수
 
+    private String representImg; // 대표이미지
     private List<String> imgList; // 상품 이미지 리스트
 
 }
